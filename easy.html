@@ -1,0 +1,83 @@
+<div id="enigme">
+
+	<p>Vous avez ces articles avec ces catégories</p>
+	<table border="1">
+		<thead>
+			<th>Article</th>
+			<th colspan="3">Catégories</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td>A</td>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+			</tr>
+			<tr>
+				<td>B</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+			</tr>
+			<tr>
+				<td>C</td>
+				<td>1</td>
+				<td>3</td>
+				<td>4</td>
+			</tr>
+		</tbody>
+	</table>
+	<p>En spécifiant comme critère de recherche. Les catégories:</p>
+	<ul>
+		<li><span class="selected">1,</span> => Vous obtenez les articles A et C</li>
+		<li><span class="selected">2,</span> => Vous obtenez les articles A et B</li>
+		<li><span class="selected">3,</span> => Vous obtenez les articles A, B et C</li>
+		<li><span class="selected">1 et 3,</span> => Vous obtenez les articles A et C</li>
+		<li><span class="selected">2 et 3,</span> => Vous obtenez les articles A et B</li>
+		<li><span class="selected">1, 2 et 3,</span> => Vous obtenez les articles A, B et C</li>
+		<li><span class="selected">3 et 4,</span> => Vous obtenez les articles B et C</li>
+		<li><span class="selected">2 et 4,</span> => Vous obtenez l'article B</li>
+	</ul>
+	<strong>À savoir que</strong>
+	<p>Le code doit fonctionner même si on décide de mettre 20 ou 30 catégories par article<br/>
+	Par conséquent, interdiction de faire une récupérer par index en dure:<br/>
+	(categories[0] ou categories[1]).<br/>
+	Mais categories[i] est autorisé</p>
+	<strong>Niveau facile</strong>
+	<code>
+	<pre>
+	const articles = [
+		{
+			name: 'A',
+			categories: [1, 2, 3]
+		},
+		{
+			name: 'B',
+			categories: [2, 3, 4]
+		},
+		{
+			name: 'C',
+			categories: [1, 3, 4]
+		}
+	];
+	
+	const selected_categories = [1, 3];
+	
+	</pre>
+	</code>
+</div>
+
+<style>
+
+.selected {
+	display: inline-block;
+	width: 100px;
+}
+
+#enigme {
+	margin: auto;
+	margin-top: 50px;
+	width: 450px;
+}
+
+</style>
